@@ -1,9 +1,10 @@
-class Sieve
+# frozen_string_literal: true
 
+class Sieve
   def initialize(n)
-    n > 1 ? @numbers = (2..n).to_a : @numbers = []
+    @numbers = n > 1 ? (2..n).to_a : []
   end
-  
+
   def primes
     @numbers.each do |e|
       c = 2
@@ -13,5 +14,4 @@ class Sieve
       end
     end
   end
-
 end

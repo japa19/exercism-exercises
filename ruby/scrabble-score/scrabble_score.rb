@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 class Scrabble
-  
   def initialize(word)
     @word = word.upcase
   end
@@ -24,6 +25,6 @@ class Scrabble
         sum += 10
       end
     end
-    return sum
+    sum
   end
 end

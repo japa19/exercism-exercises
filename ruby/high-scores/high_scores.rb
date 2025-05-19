@@ -1,9 +1,10 @@
-class HighScores 
-  
+# frozen_string_literal: true
+
+class HighScores
   attr_reader :scores
 
   def initialize(scores)
-    @scores = scores  
+    @scores = scores
   end
 
   def latest
@@ -21,7 +22,6 @@ class HighScores
   def latest_is_personal_best?
     latest == personal_best
   end
-
 end
 
 scores = [30, 50, 20, 70]

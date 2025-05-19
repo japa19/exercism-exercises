@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'high_scores'
 
 class HighScoresTest < Minitest::Test
-  def skip ; end
-  
+  def skip; end
+
   def test_list_of_scores
     # skip
     scores = [30, 50, 20, 70]

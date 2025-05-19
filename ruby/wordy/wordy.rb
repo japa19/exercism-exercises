@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class WordProblem
   attr_reader :problem
 
   OPERATORS = {
-    'plus'       => :+,
-    'minus'      => :-,
+    'plus' => :+,
+    'minus' => :-,
     'multiplied' => :*,
-    'divided'    => :/,
-  }
+    'divided' => :/
+  }.freeze
 
   def initialize(problem)
     @problem = problem
@@ -21,11 +23,11 @@ class WordProblem
   private
 
   def operators
-    @operators ||= problem.scan(/[\d]+\s([\w]+)/).flat_map { |(op)| OPERATORS[op] }.compact
+    @operators ||= problem.scan(/\d+\s(\w+)/).flat_map { |(op)| OPERATORS[op] }.compact
   end
 
   def numerals
-    @numerals ||= problem.scan(/([+-]?[\d]+)/).flatten.map(&:to_i)
+    @numerals ||= problem.scan(/([+-]?\d+)/).flatten.map(&:to_i)
   end
 
   def valid?

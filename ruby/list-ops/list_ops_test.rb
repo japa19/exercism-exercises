@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'list_ops'
 
 class ListOpsTest < Minitest::Test
-  def skip ; end
+  def skip; end
 
   def test_count_empty
     assert_equal 0, ListOps.arrays([])
@@ -104,5 +106,4 @@ class ListOpsTest < Minitest::Test
     input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     assert_equal 3_628_800, ListOps.factorial_reducer(input)
   end
-
 end

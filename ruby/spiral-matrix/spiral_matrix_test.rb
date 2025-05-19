@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'spiral_matrix'
 
 class SpiralMatrixTest < Minitest::Test
-  def skip ; end
-  
+  def skip; end
+
   def test_empty_spiral
     # skip
     spiral = SpiralMatrix.new(0).matrix

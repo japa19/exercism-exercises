@@ -1,7 +1,8 @@
-class Robot
+# frozen_string_literal: true
 
+class Robot
   attr_reader :name
-  
+
   @@names = []
 
   def self.forget
@@ -15,7 +16,7 @@ class Robot
   def reset
     @@used_names.delete(@name)
     @name = new_name
-    @@used_names << (@name)
+    @@used_names << @name
   end
 
   private
@@ -27,5 +28,4 @@ class Robot
       return name unless @@used_names.include?(name)
     end
   end
-
 end

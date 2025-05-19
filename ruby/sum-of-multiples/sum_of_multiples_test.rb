@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'sum_of_multiples'
 
 class SumOfMultiplesTest < Minitest::Test
+  def skip; end
 
-  def skip ; end
-  
   def test_no_multiples_within_limit
     # skip
     sum_of_multiples = SumOfMultiples.new(3, 5)

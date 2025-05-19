@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 class Squares
-  
   def initialize(number)
     @number = number
   end
 
   def square_of_sum
-    ((1..@number).sum)**2
+    (1..@number).sum**2
   end
 
   def sum_of_squares

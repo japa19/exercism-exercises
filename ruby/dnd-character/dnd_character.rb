@@ -1,5 +1,6 @@
-class DndCharacter
+# frozen_string_literal: true
 
+class DndCharacter
   attr_reader :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :hitpoints
 
   def self.modifier(constitution)
@@ -21,5 +22,4 @@ class DndCharacter
     @constitution_modifier = DndCharacter.modifier(@constitution)
     @hitpoints = 10 + @constitution_modifier
   end
-
 end

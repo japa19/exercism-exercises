@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 class Acronym
-  
   def self.abbreviate(phrase)
     phrase.scan(/\b\w/).join.upcase
     # phrase.gsub(/[!.,?]/, "")
@@ -7,5 +8,4 @@ class Acronym
     #       .map{ |word| word[0].upcase unless word.empty? }.compact
     #       .join
   end
-
 end

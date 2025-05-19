@@ -1,17 +1,18 @@
+# frozen_string_literal: true
+
 module PrimeFactors
-  
   def self.of(number)
-      factors = []
-      divisor = 2
-    
-      while number > 1
-        while number % divisor == 0
-          factors << divisor
-          number /= divisor
-        end
-        divisor += 1
+    factors = []
+    divisor = 2
+
+    while number > 1
+      while (number % divisor).zero?
+        factors << divisor
+        number /= divisor
       end
-    
-      factors
+      divisor += 1
+    end
+
+    factors
   end
 end

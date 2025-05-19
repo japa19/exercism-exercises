@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'simple_cipher'
 
 class RandomKeyCipherTest < Minitest::Test
-
-
   def setup
     @cipher = Cipher.new
   end

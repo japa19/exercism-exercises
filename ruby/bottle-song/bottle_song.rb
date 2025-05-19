@@ -1,18 +1,19 @@
+# frozen_string_literal: true
+
 module BottleSong
-  
   def self.digit_to_name(digit)
     digit_names = {
-      0 => "no",
-      1 => "one",
-      2 => "two",
-      3 => "three",
-      4 => "four",
-      5 => "five",
-      6 => "six",
-      7 => "seven",
-      8 => "eight",
-      9 => "nine",
-      10 => "ten"
+      0 => 'no',
+      1 => 'one',
+      2 => 'two',
+      3 => 'three',
+      4 => 'four',
+      5 => 'five',
+      6 => 'six',
+      7 => 'seven',
+      8 => 'eight',
+      9 => 'nine',
+      10 => 'ten'
     }
     digit_names[digit]
   end
@@ -27,12 +28,10 @@ module BottleSong
   end
 
   def self.recite(start_bottles, verse_count)
-    output = ""
+    output = ''
     start_bottles.downto(start_bottles - verse_count + 1) do |i|
       output << verse(i)
     end
     output
   end
-
 end
-

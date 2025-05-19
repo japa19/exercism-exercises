@@ -1,8 +1,10 @@
-module Luhn
+# frozen_string_literal: true
 
+module Luhn
   def self.valid?(number)
     number = number.delete(' ')
     return false if number.length <= 1 || number !~ /^\d+$/
+
     sum = 0
     number.reverse.each_char.with_index do |digit, index|
       if index.even?
@@ -12,7 +14,6 @@ module Luhn
         sum += double > 9 ? double - 9 : double
       end
     end
-    sum % 10 == 0
+    (sum % 10).zero?
   end
-
 end

@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'bank_account'
 
 class BankAccountTest < Minitest::Test
+  def skip; end
 
-  def skip ; end
-  
   def test_newly_opened_account_has_zero_balance
     # skip
     bank_account = BankAccount.new

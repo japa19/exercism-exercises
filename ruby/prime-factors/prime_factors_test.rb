@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'prime_factors'
 
 class PrimeFactorsTest < Minitest::Test
-  def skip ; end
-  
+  def skip; end
+
   def test_no_factors
     # skip
     assert_empty PrimeFactors.of(1)

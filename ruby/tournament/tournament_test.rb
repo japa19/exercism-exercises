@@ -1,11 +1,10 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'tournament'
 
 class TournamentTest < Minitest::Test
-
-
   def test_a_win_is_three_points_a_loss_is_zero_points
-    
     input = <<~INPUT
       Allegoric Alaskans;Blithering Badgers;win
     INPUT

@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 class BoutiqueInventory
   def initialize(items)
     @items = items
   end
 
   def item_names
-    @items.map { |item| 
-      item[:name]}.sort
+    @items.map do |item|
+      item[:name]
+    end.sort
   end
 
   def cheap
@@ -21,10 +24,12 @@ class BoutiqueInventory
   end
 
   def total_stock
-    @items.sum { |item| 
-      item[:quantity_by_size].values.sum}
+    @items.sum do |item|
+      item[:quantity_by_size].values.sum
+    end
   end
 
   private
+
   attr_reader :items
 end

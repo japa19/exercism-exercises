@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'resistor_color_duo'
 
 class ResistorColorDuoTest < Minitest::Test
-  def skip ; end
-
-    
+  def skip; end
 
   def test_brown_and_black
     # skip

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module PerfectNumber
-  
   def self.classify(n)
-    raise RuntimeError if n < 0
+    raise RuntimeError if n.negative?
+
     sum = aliquot_sum(n)
     if sum == n
       'perfect'
@@ -14,8 +16,8 @@ module PerfectNumber
 
   def self.aliquot_sum(n)
     sum = 0
-    (1..n/2).each do |i|
-      sum += i if n % i == 0
+    (1..n / 2).each do |i|
+      sum += i if (n % i).zero?
     end
     sum
   end

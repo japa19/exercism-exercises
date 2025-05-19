@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'sieve'
 
 class SieveTest < Minitest::Test
+  def skip; end
 
-  def skip ; end
-  
   def test_no_primes_under_two
     # skip
     expected = []

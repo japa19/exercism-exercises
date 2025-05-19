@@ -1,5 +1,6 @@
-module CollatzConjecture
+# frozen_string_literal: true
 
+module CollatzConjecture
   def self.steps(n)
     raise ArgumentError if n <= 0
 
@@ -8,7 +9,6 @@ module CollatzConjecture
       n.even? ? n /= 2 : n = 3 * n + 1
       steps += 1
     end
-    steps 
+    steps
   end
-
 end

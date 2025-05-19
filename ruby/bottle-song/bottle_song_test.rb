@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'bottle_song'
 
@@ -16,21 +18,21 @@ class BottleSongTest < Minitest::Test
   def test_last_generic_verse
     skip
     expected = <<~TEXT
-      Three green bottles hanging on the wall,
-      Three green bottles hanging on the wall,
-      And if one green bottle should accidentally fall,
-      There'll be two green bottles hanging on the wall.
-    TEXT  
-    assert_equal expected, BottleSong.recite(3, 1)
-  end
+          Three green bottles hanging on the wall,
+          Three green bottles hanging on the wall,
+          And if one green bottle should accidentally fall,
+          There'll be two green bottles hanging on the wall.
+        TEXT#{'  '}
+        assert_equal expected, BottleSong.recite(3, 1)
+      end
 
-  def test_verse_with_2_bottles
-    skip
-    expected = <<~TEXT
-      Two green bottles hanging on the wall,
-      Two green bottles hanging on the wall,
-      And if one green bottle should accidentally fall,
-      There'll be one green bottle hanging on the wall.
+      def test_verse_with_2_bottles
+        skip
+        expected = <<~TEXT
+          Two green bottles hanging on the wall,
+          Two green bottles hanging on the wall,
+          And if one green bottle should accidentally fall,
+          There'll be one green bottle hanging on the wall.
     TEXT
     assert_equal expected, BottleSong.recite(2, 1)
   end

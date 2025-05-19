@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'ostruct'
 
 class BoutiqueInventory
-
   attr_reader :items
 
   def initialize(items)
@@ -23,6 +24,4 @@ class BoutiqueInventory
   def out_of_stock
     @items.select { |item| item.quantity_by_size.values.sum.zero? }
   end
-
 end
-

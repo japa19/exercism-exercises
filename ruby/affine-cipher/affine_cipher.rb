@@ -1,13 +1,15 @@
-class  Affine
-  
+# frozen_string_literal: true
+
+class Affine
   M = 26
 
   def initialize(a, b)
-    @a = a 
+    @a = a
     @b = b
     raise ArgumentError unless a.gcd(M) == 1 && @a.is_a?(Integer) && @b.is_a?(Integer)
+
     @mmi = mmi
-  end 
+  end
 
   def encode(text)
     text.downcase
@@ -28,11 +30,10 @@ class  Affine
 
   def decrypt_char(c)
     # D(y) = (a^-1)(y - b) mod m
-    (((@mmi * ((c.ord - 97) - @b)) % M) +97).chr
+    (((@mmi * ((c.ord - 97) - @b)) % M) + 97).chr
   end
-  
+
   def mmi
     (0..M).find { |number| return number if @a * number % M == 1 }
   end
-
 end

@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'flatten_array'
 
 class FlattenArrayTest < Minitest::Test
-  def skip ; end
+  def skip; end
+
   def test_empty
     # skip
     assert_empty FlattenArray.flatten([])

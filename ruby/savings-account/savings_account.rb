@@ -1,15 +1,16 @@
-module SavingsAccount
-  
+# frozen_string_literal: true
 
+module SavingsAccount
   def self.interest_rate(balance)
-    return 3.213 if balance < 0
+    return 3.213 if balance.negative?
     return  0.500 if balance < 1_000
     return  1.621 if balance < 5_000
-    return  2.475
+
+    2.475
   end
 
   def self.annual_balance_update(balance)
-    balance + (balance * interest_rate(balance) / 100) 
+    balance + (balance * interest_rate(balance) / 100)
   end
 
   def self.years_before_desired_balance(current_balance, desired_balance)
@@ -20,6 +21,5 @@ module SavingsAccount
     end
     years
   end
-
 end
 p SavingsAccount.interest_rate(999.999)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Atbash
   ALPHABET = ('a'..'z').to_a.join
 
@@ -8,5 +10,4 @@ class Atbash
   def self.decode(ciphertext)
     ciphertext.gsub(/\W/, '').tr(ALPHABET, ALPHABET.reverse)
   end
-
 end

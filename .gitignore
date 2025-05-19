@@ -9,6 +9,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+megalinter-reports
+out
 
 # Used by dotenv library to load environment variables.
 # .env

@@ -1,0 +1,27 @@
+---
+extends: default
+rules:
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+  comments:
+    min-spaces-from-content: 1
+  comments-indentation: false
+  document-end: disable
+  document-start:
+    level: warning
+  indentation:
+    check-multi-line-strings: false
+    indent-sequences: whatever
+    spaces: consistent
+  key-duplicates:
+    level: error
+  line-length:
+    level: warning
+    max: 250
+  new-line-at-end-of-file:
+    level: error
+  octal-values:
+    forbid-implicit-octal: true
+  truthy:
+    level: warning

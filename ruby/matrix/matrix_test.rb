@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'matrix'
 
 class MatrixTest < Minitest::Test
-
   def skip; end
+
   def test_extract_row_from_one_number_matrix
     # skip
-      matrix = Matrix.new("1")
-      assert_equal [1], matrix.row(1)
+    matrix = Matrix.new('1')
+    assert_equal [1], matrix.row(1)
   end
 
   def test_can_extract_row
@@ -30,7 +32,7 @@ class MatrixTest < Minitest::Test
 
   def test_extract_column_from_one_number_matrix
     skip
-    matrix = Matrix.new("1")
+    matrix = Matrix.new('1')
     assert_equal [1], matrix.column(1)
   end
 

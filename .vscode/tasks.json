@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run MegaLinter",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "mega-linter-runner",
+		"--flavor",
+		"ruby"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Lint your code using MegaLinter"
+        }
+    ]
+}

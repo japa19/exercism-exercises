@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 class Attendee
-  
   attr_reader :pass_id, :height
 
-  
   def initialize(height)
     @height = height
   end
@@ -17,10 +17,6 @@ class Attendee
 
   # Do not edit above methods, add your own methods below.
 
-  def pass_id
-    @pass_id
-  end
-  
   def has_pass?
     !@pass_id.nil?
   end
