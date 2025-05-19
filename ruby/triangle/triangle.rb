@@ -1,0 +1,24 @@
+class  Triangle
+
+  def initialize(sides)
+    @a = sides[0] 
+    @b = sides[1]
+    @c = sides[2]
+  end
+
+  def valid?
+    @a + @b > @c && @a + @c > @b && @b + @c > @a && @a > 0 && @b > 0 && @c > 0
+  end
+
+  def equilateral?
+    valid? && (@a == @b && @b == @c)
+  end
+
+  def isosceles?
+    valid? && (@a == @b || @a == @c || @b == @c)
+  end
+
+  def scalene?
+    valid? && (@a != @b && @a != @c && @b != @c)
+  end
+end

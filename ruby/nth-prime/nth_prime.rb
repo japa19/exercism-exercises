@@ -1,0 +1,38 @@
+class  Prime
+  
+  def self.nth(n)
+    raise ArgumentError if n < 1
+    # Approximate the upper bound for the nth prime using the prime number theorem
+    upper_bound = (n < 6) ? 15 : (n * Math.log(n) + n * Math.log(Math.log(n))).to_i
+    primes = get_primes(upper_bound)
+    count_primes(primes, n)
+  end
+
+  def self.get_primes(s)
+    primes = Array.new(s, 1)
+    (2...s).each do |i|
+      if primes[i] == 1
+        (i...s).each do |j|
+          if i * j < s
+            primes[i * j] = 0
+          else
+            break
+          end
+        end
+      end
+    end
+    primes
+  end 
+
+  def self.count_primes(primes, nth)
+  # Returns the n-th prime represented by the index of the n-th "1" in the array.
+    count = 0
+    for k in (2...primes.length)
+      count += primes[k]
+      if count == nth
+          return k
+      end
+    end
+    nil
+  end
+end
